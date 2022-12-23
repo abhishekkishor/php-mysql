@@ -15,15 +15,15 @@ services:
       - mysql
 
   
-  # php:
-  #   build:
-  #     context: .
-  #     dockerfile: dockerfiles/php.dockerfile
-  #   volumes:
-  #     - ./src:/var/www/html:delegated
-  #   ports:
-  #     - '3000:9000'
-  #   container_name: php
+  php:
+    build:
+      context: .
+      dockerfile: dockerfiles/php.dockerfile
+    volumes:
+      - ./src:/var/www/html:delegated
+    ports:
+      - '3000:9000'
+    container_name: php
   
 
   mysql:
